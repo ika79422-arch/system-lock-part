@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>System Lock-ID</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, sans-serif;
+    }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      color: #0b2b44;
+    }
+
+    /* VIDEO BACKGROUND */
+    video.bg-video {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -2;
+    }
+
+    /* OVERLAY CERAH */
+    .overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(180deg, rgba(220,245,255,0.75), rgba(180,220,255,0.85));
+      z-index: -1;
+    }
+
+    /* CENTER */
+    .container {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* PANEL */
+    .panel {
+      width: 380px;
+      background: rgba(255,255,255,0.85);
+      border-radius: 16px;
+      padding: 22px 20px;
+      box-shadow: 0 12px 40px rgba(0,80,120,0.25);
+      backdrop-filter: blur(10px);
+    }
+
+    .title {
+      text-align: center;
+      font-weight: 700;
+      letter-spacing: 2px;
+      margin-bottom: 18px;
+      color: #0b6fa8;
+    }
+
+    .field {
+      margin-bottom: 12px;
+    }
+
+    .field label {
+      font-size: 12px;
+      font-weight: 600;
+      color: #1d5f86;
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    .field input,
+    .field select {
+      width: 100%;
+      padding: 9px 10px;
+      border-radius: 8px;
+      border: 1px solid #b7dbef;
+      background: rgba(255,255,255,0.9);
+      font-size: 13px;
+      outline: none;
+    }
+
+    .field input:focus,
+    .field select:focus {
+      border-color: #4fb6e6;
+      box-shadow: 0 0 0 2px rgba(79,182,230,0.2);
+    }
+
+    .note {
+      font-size: 11px;
+      color: #4f87a8;
+      margin-top: 3px;
+    }
+
+    /* BUTTON KECIL & RAPI */
+    .btn {
+      margin-top: 14px;
+      width: 100%;
+      padding: 9px;
+      border-radius: 10px;
+      border: none;
+      background: linear-gradient(135deg, #4fb6e6, #2c8ecb);
+      color: white;
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    .btn:hover {
+      opacity: 0.9;
+    }
+
+    .footer {
+      text-align: center;
+      font-size: 11px;
+      margin-top: 14px;
+      color: #4f87a8;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- GANTI video.mp4 DENGAN VIDEO KAMU -->
+  <video class="bg-video" autoplay muted loop>
+    <source src="video.mp4" type="video/mp4">
+  </video>
+
+  <div class="overlay"></div>
+
+  <div class="container">
+    <div class="panel">
+      <div class="title">SYSTEM LOCK-ID</div>
+
+      <div class="field">
+        <label>User ID</label>
+        <input type="text" placeholder="" />
+      </div>
+
+      <div class="field">
+        <label>Provider</label>
+        <select>
+          <option>PG SOFT</option>
+          <option>PRAGMATIC</option>
+          <option>HABANERO</option>
+        </select>
+      </div>
+
+      <div class="field">
+        <label>Game</label>
+        <select>
+          <option>MAHJONG WAYS</option>
+          <option>MAHJONG WAYS 2</option>
+          <option>WILD BANDITO</option>
+        </select>
+      </div>
+
+      <div class="field">
+        <label>Server</label>
+        <select>
+          <option>ASIA TENGGARA</option>
+          <option>ASIA TIMUR</option>
+          <option>GLOBAL</option>
+        </select>
+      </div>
+
+      <div class="field">
+        <label>Winrate</label>
+        <select>
+          <option>99%</option>
+          <option>95%</option>
+          <option>90%</option>
+        </select>
+      </div>
+
+      <div class="field">
+        <label>Kode Aktivasi</label>
+        <input type="text" value="80.000" />
+        <div class="note">Nilai bisa diubah</div>
+      </div>
+
+      <button class="btn">AKTIFKAN</button>
+
+      <div class="footer">© 2026 System Lock-ID</div>
+    </div>
+  </div>
+
+</body>
+</html>
